@@ -26,6 +26,22 @@
   margin: 0;
  }
 
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
  /* MAIN CONTAINER */
  main {
   background: var(--clr-white);
