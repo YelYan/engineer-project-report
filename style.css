@@ -4,3 +4,155 @@
   margin: 0;
   padding: 0;
  }
+
+ :root {
+  --clr-primary : #0071BC;
+  --clr-secondary : #2d3748;
+  --clr-white : #ffffff;
+  --clr-black : #000000;
+  --clr-body-bg : #F9F9F9;
+ }
+ body {
+  padding: 1rem 2rem;
+  background-color: var(--clr-body-bg);
+  font-family: "Inter", sans-serif;
+ }
+ img{
+  display: inline-block;
+  max-width: 100%;
+  object-fit: cover;
+ }
+ h1{
+  margin: 0;
+ }
+
+ /* MAIN CONTAINER */
+ main {
+  background: var(--clr-white);
+  padding: 16px;
+box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
+-webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
+-moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
+ }
+
+ .section{
+  margin-top: 3rem;
+ }
+
+ /* HEADER */
+ header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ .header-title{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+ }
+ .header-logo{
+  color: var(--clr-primary);
+ }
+ .header-subtitle{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+ }
+ .header-subtitle-1{
+  font-weight: 700;
+ }
+ .header-subtitle-2{
+  font-weight: 400;
+ }
+ .header-right-logo{
+  color: var(--clr-primary);
+ }
+
+ /* HERO SECTION */
+ .hero-section{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+ }
+ .hero-image-container{
+  flex-basis: 50%;
+  height: 80vh;
+  overflow: hidden;
+ }
+ .hero-image{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+ }
+
+.hero-content{
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+.hero-content-title{
+  color: var(--clr-secondary);
+  font-size: 3.5rem;
+  font-weight: 900;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  z-index: 1;
+  letter-spacing: -1;
+}
+.hero-content-date{
+  opacity: 0.75;
+  font-size: 1.2rem;
+}
+.hero-content-address{
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+.hero-content-address-bold {
+  font-weight: bolder;
+}
+ /* RESPONSIVE FOR MOBILE AND TABLET */
+
+  /* FOR TABLET */
+ @media (max-width : 768px) {
+  body {
+    padding: 1rem;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  /* HEADER TABLET */
+  .header-subtitle{
+    font-size: 8px;
+  }
+
+  .hero-content-title{
+    font-size: 2.5rem;
+  }
+
+  /* HERO SECTION TABLET */
+  .hero-section{
+      flex-direction: column;
+  }
+  .hero-image-container{
+    width: 60vw;
+  }
+  .hero-image{
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+ /* FOR MOBILE */
+ @media (max-width : 500px) {
+  .hero-image-container{
+    width: 80vw;
+  }
+  /* HEADER MOBILE */
+  .header-subtitle{
+    font-size: 8px;
+  }
+}
