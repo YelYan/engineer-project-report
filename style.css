@@ -5,20 +5,21 @@
   padding: 0;
  }
 
- /* custom boostrap color for table header */
- .table-darkblue {
-  --bs-table-bg: #003366;   
-  --bs-table-color: #ffffff; 
-  --bs-table-border-color: #002244; 
-}
-
- :root {
-  --clr-primary : #0071BC;
+  :root {
+  --clr-primary : #16284c;
   --clr-secondary : #2d3748;
   --clr-white : #ffffff;
   --clr-black : #000000;
   --clr-body-bg : #F9F9F9;
+  --clr-table-border : #002244; 
  }
+
+ /* custom boostrap color for table header */
+ .table-darkblue {
+  --bs-table-bg: var(--clr-primary);
+  --bs-table-color: var(--clr-white); 
+  --bs-table-border-color: var(--clr-table-border);
+}
 
 
  body {
@@ -221,6 +222,9 @@ tr:nth-child(even) {
   table {
     border-collapse: collapse;
     width: 100%;
+  }
+  thead{
+      background-color: var(--clr-primary) !important;
   }
 
   th, td {
