@@ -5,6 +5,13 @@
   padding: 0;
  }
 
+ /* custom boostrap color for table header */
+ .table-darkblue {
+  --bs-table-bg: #003366;   
+  --bs-table-color: #ffffff; 
+  --bs-table-border-color: #002244; 
+}
+
  :root {
   --clr-primary : #0071BC;
   --clr-secondary : #2d3748;
@@ -12,6 +19,8 @@
   --clr-black : #000000;
   --clr-body-bg : #F9F9F9;
  }
+
+
  body {
   padding: 1rem 2rem;
   background-color: var(--clr-body-bg);
@@ -46,9 +55,9 @@ tr:nth-child(even) {
  main {
   background: var(--clr-white);
   padding: 16px;
-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
--webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
--moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
  }
 
  .section{
@@ -232,4 +241,6 @@ box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
     margin-top: 0;
   }
 }
+
+
 
