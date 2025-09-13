@@ -94,11 +94,13 @@ box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
  .hero-image-container{
   flex-basis: 50%;
   height: 80vh;
+  display: grid;
+  place-items: anchor-center;
   overflow: hidden;
  }
  .hero-image{
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   margin: 0 auto;
  }
 
@@ -129,6 +131,8 @@ box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
 .hero-content-address-bold {
   font-weight: bolder;
 }
+
+
  /* RESPONSIVE FOR MOBILE AND TABLET */
 
   /* FOR TABLET */
@@ -173,5 +177,59 @@ box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.08);
   }
   .header-logo{
     width: 5rem;  
+  } 
+}
+
+
+/* Apply only when printing */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Keep header and hero together */
+  header,
+  .hero-section {
+    page-break-before: auto;
+    page-break-after: avoid; 
+  }
+  .hero-section{
+    margin-top: 20rem;
+  }
+
+  /* Every section AFTER hero should start on a new page */
+  .section {
+    page-break-before: always;
+  }
+
+  /* Specifically override hero section */
+  .hero-section.section {
+    page-break-before: auto;
+  }
+
+  /* Table styling for print */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #000;
+    padding: 6px;
+    text-align: left;
   }
 }
+
+@media print and (orientation: portrait) {
+  .hero-section {
+    margin-top: 20rem;
+  }
+}
+
+@media print and (orientation: landscape) {
+  .hero-section {
+    margin-top: 0;
+  }
+}
+
