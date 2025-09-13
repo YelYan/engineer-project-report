@@ -20,7 +20,13 @@
   --bs-table-color: var(--clr-white); 
   --bs-table-border-color: var(--clr-table-border);
 }
-
+.text-main {
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+.bg-main {
+  color: var(--clr-primary);
+}
 
  body {
   padding: 1rem 2rem;
